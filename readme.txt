@@ -1,2 +1,3 @@
-This submission is complete and satisfies
-all required specifications.
+💻 Página web de reseñas para restaurantes
+
+👩🏽‍💻 Desarollada en HTML5, CSS y JavaScript
