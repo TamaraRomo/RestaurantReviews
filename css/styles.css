@@ -1,0 +1,358 @@
+ /*Tamara Rodriguez Romo
+ styles.css for Submission 2*/
+:root {
+    --accent-color: #45B39D;
+    --accent-dark-color: #F8C471;
+    --font-color: #595959;
+    --bg-color: #E8F8F5;
+ }
+ 
+ body {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+    color: var(--font-color);
+ }
+ 
+ main {
+    background-color: #AED6F1;
+    margin: 0;
+    padding: 10px;
+ }
+ 
+.pages a:link {
+    color: var(--font-color); 
+ }   
+ 
+.pages a:visited {
+    color: var(--font-color);  
+ }   
+   
+ header {
+    background-color: #F5B7B1  ;
+    padding: 5px;
+ }
+ 
+ header h1 {
+   color: black;
+   -webkit-text-fill-color: var(--accent-dark-color);
+   -webkit-text-stroke: 2px #1B2631;
+    font-size: 3rem;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 3px gray; 
+    text-align: center;
+ }
+
+ h2{
+   text-align: center;
+   color: #1B2631;
+ }
+
+
+ nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+ }
+ 
+ nav li {
+    display: inline-block;
+    text-align: center;
+ }
+ 
+ nav li a {
+    text-decoration: none;  
+    padding: 10px 20px;
+    background-color: #F9E79F;
+    border-radius: 5px;
+ }
+ 
+ .pages a:hover {
+    
+    color: white;
+    background-color: var(--accent-color);    
+ }
+ 
+ .feature {
+    border-radius: 10px;
+    background: white;
+    padding: 2px 15px;
+    margin: 10px 0;
+ }
+ 
+ .feature a {
+    text-decoration: none;  
+ }
+ 
+h2.name{
+   color: black;
+   -webkit-text-fill-color: var(--accent-color);
+   -webkit-text-stroke: 1px black;
+    font-size: 2rem;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 3px gray; 
+    text-align: center;
+ }
+
+h2.name a:visited {
+   color: black !important;
+   -webkit-text-fill-color: var(--accent-color) !important;
+   -webkit-text-stroke: 1px black !important;
+ }
+
+h2.name:hover{
+   color: var(--accent-color);
+   transform: scale(1.2);
+ }
+ 
+
+ .flex-container {
+    display: flex;
+    flex-direction: row;
+ }
+
+  .flex-container > img{
+   position: relative;
+   padding-bottom: 50px;
+ }
+ 
+ .feature-right {
+    display: block;
+    margin-left: 20px;
+    padding: 30px;
+    text-align: center;
+ }
+
+ .feature-right > .description{
+   padding: 10px;
+   text-align: justify;
+   font-size: 1.2rem;
+ }
+.feature-right > .stars{
+   padding: 10px;
+   height: 25px;
+ }
+ 
+ @keyframes lowerAd {
+    from { top: -80px; }   
+    to { top: 30px; }
+ }
+ 
+ #advertisement {
+    animation-name: lowerAd;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;      
+    position: fixed;
+    right: 30px;
+    top: -80px;
+    width: 200px;
+    background-color: #A3E4D7;
+    box-shadow: 5px 5px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;   
+    transition: all 200ms ease-in-out;  
+ }
+
+ #advertisement a{
+   text-decoration: none;
+   color: var(--font-color);
+ }
+ 
+ #advertisement:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.2, 1.2); 
+ }
+
+ #advertisement:hover a{
+   color:#f9f9f9
+ }
+
+ /*Reviews styles*/
+ .stars-rating{
+   text-align: center;
+ }
+
+ .restaurant-name{
+   color: black;
+   -webkit-text-fill-color: white;
+   -webkit-text-stroke: 1px black;
+    font-size: 2.5rem;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 3px gray; 
+    text-align: center;
+ }
+
+
+ .main-restaurant-photo {
+   display: block;
+   margin: 0 auto;
+   border-radius: 10px;
+   transition: box-shadow 0.3s ease-in-out;
+ }
+
+ .main-restaurant-photo:hover{
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+ }
+ .restaurant-photo {
+   position: relative;
+   border-radius: 10px;
+   transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .restaurant-photo:hover{
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+
+  .overview{
+   border-radius: 5px;
+   box-shadow: 4px 4px #888888;
+   background: white;
+   padding: 10px;
+  }
+
+  .review {
+  display: grid;
+  grid-template-columns: 130px auto;
+  grid-template-areas: 
+      "name details"
+      "date details"
+      "rating details";
+  border-radius: 5px;
+  box-shadow: 4px 4px #888888;
+  background: white;
+  padding: 8px 8px;
+  margin: 10px 0;   
+  font-size: smaller;
+  }
+
+  .review-name {
+  grid-area: name;
+  text-align: center;
+  }
+
+  .review-date {
+  grid-area: date;
+  text-align: center;
+  }
+
+  .review-rating {
+  grid-area: rating;
+  text-align: center;
+  }
+
+  .review-rating > img {
+  height: 20px;
+  }
+
+  .review-details {
+  grid-area: details;
+  font-size: larger;
+  }
+
+  /*Add review styles*/
+  .main-addreview{
+   display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+  }
+  .addreview-title{
+   margin-bottom: 20px;
+   color: black;
+   -webkit-text-fill-color: white;
+   -webkit-text-stroke: 1px black;
+    font-size: 2.5rem;
+    margin: 10px 10px;
+    text-shadow: 2px 2px 3px gray; 
+    text-align: center;
+  }
+  form{
+   width: 80%; 
+    max-width: 600px; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  label {
+   width: 100px;
+   display: inline-block;
+   text-align: right;
+   margin-right: 8px;
+   }
+
+   input, select, textarea {
+   width: 350px;
+   padding: 10px;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+   box-sizing: border-box;
+   }
+
+   input[type=number], input[type=date] {
+   width: auto;
+   }
+
+   button {
+   width: 150px;
+   background-color: var(--accent-color);
+   color: white;
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer; 
+   }
+
+   button:hover {
+   background-color: var(--accent-dark-color);   
+   }
+
+   /*About styles*/
+ .mapouter {
+   width: 600px; /* Ancho deseado del mapa */
+    height: 500px; /* Alto deseado del mapa */
+    margin: 0 auto; /* Centrar horizontalmente */
+    overflow: hidden;
+    border-radius: 8px; 
+    position: relative;
+   border: 1px solid gray; 
+}
+.mapouter iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 20px;
+}
+.about-main{
+   text-align: center;
+}
+
+address a{
+   color: var(--font-color);
+   text-decoration: overline;
+}
+@media screen and (max-width: 800px) {
+   .flex-container {
+     flex-direction: column; 
+   }
+   .feature-right {
+     margin-left: 0; 
+     padding: 15px; 
+     text-align: center; 
+   }
+   .restaurant-photo{
+      max-width: 100%;
+   }
+   .main-restaurant-photo{
+      max-width: 100%;
+   }
+   .mapouter {
+      max-width: 100%;
+    }
+ }
